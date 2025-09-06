@@ -53,24 +53,24 @@ Un pedido puede registrarse con uno o varios pagos.
 
 1. 1NF – Atributos atómicos y sin grupos repetidos
 
-- Separar Detalle de Pedidos hace que cada fila represente una sola combinación pedido–producto–cantidad, no hay columnas repetidas ni listas dentro de una celda.
+ - Separar Detalle de Pedidos hace que cada fila represente una sola combinación pedido–producto–cantidad, no hay columnas repetidas ni listas dentro de una celda.
 
-- Direcciones separada evita meter varias direcciones en una sola columna tipo “texto largo”.
+ - Direcciones separada evita meter varias direcciones en una sola columna tipo “texto largo”.
 
 2. 2NF – Dependencia total de la clave
 
-En Detalle, los atributos cantidad y precio_unitario dependen de la clave primaria.
+ - En Detalle, los atributos cantidad y precio_unitario dependen de la clave primaria.
 
-En Pagos, los atributos dependen de su ID_pago
+ - En Pagos, los atributos dependen de su ID_pago
 
 3. 3NF – Sin dependencias transitivas
 
-- El nombre del estado no está en Pedidos, sino en Estados_pedido.
+ - El nombre del estado no está en Pedidos, sino en Estados_pedido.
 
-- La descripción del método de pago no está en Pagos ni Pedidos, sino en Metodos_pago.
+ - La descripción del método de pago no está en Pagos ni Pedidos, sino en Metodos_pago.
 
-- Los datos del cliente no se repiten en Pedidos ni Direcciones.
+ - Los datos del cliente no se repiten en Pedidos ni Direcciones.
 
-- 4NF – Hechos independientes en tablas independientes
+4. 4NF – Hechos independientes en tablas independientes
 
-Un pedido tiene dos multivaluados: productos y pagos. Modelarlos en Detalle y Pagos evita combinaciones y duplicación masiva.
+ - Un pedido tiene dos multivaluados: productos y pagos. Modelarlos en Detalle y Pagos evita combinaciones y duplicación masiva.
